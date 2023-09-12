@@ -6,7 +6,7 @@ from Schema.models import UserSchema, UpdateSchema
 app = Flask(__name__)
 
 # Enter your Mongodb URI here (ex:-mongodb://localhost:27017/users)
-app.config["MONGO_URI"] = "[MongoDb URI]"
+app.config["MONGO_URI"] = "[MongoDb URI/databasename]"
 
 mongo = PyMongo(app)
 mongo.db.users.create_index('email', unique=True)
